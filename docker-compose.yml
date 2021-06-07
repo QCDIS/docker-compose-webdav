@@ -17,8 +17,8 @@ services:
     image:  bytemark/webdav
     environment:
       LOCATION: /webdav
-    expose:
-      - 80:80
+    ports:
+    - 80:80
     volumes:
       - webdav-data:/var/lib/dav
 
