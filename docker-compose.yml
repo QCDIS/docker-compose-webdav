@@ -14,9 +14,11 @@ services:
 
   webdav:
     restart: unless-stopped
-    image:  bytemark/webdavConnection
+    image:  bytemark/webdav
     environment:
       LOCATION: /webdav
+    expose:
+      - 80:80
     volumes:
       - webdav-data:/var/lib/dav
 
