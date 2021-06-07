@@ -14,13 +14,12 @@ services:
 
   webdav:
     restart: unless-stopped
-    image:  bytemark/webdav
-    environment:
-      LOCATION: /webdav
-    ports:
-    - 80:80
+    image:  ionelmc/webdav
+    expose:
+    - 8080
     volumes:
       - webdav-data:/var/lib/dav
+      - ./config:/config
 
 
 volumes:
