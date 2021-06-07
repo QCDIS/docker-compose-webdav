@@ -18,9 +18,4 @@ services:
     expose:
     - 8080
     volumes:
-      - /home/vm_user/webdav-data:/var/lib/dav
-      - ./config:/config
-
-
-volumes:
-  webdav-data:
+      - /home/vm_user/webdav-data:/media
